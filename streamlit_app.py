@@ -28,7 +28,7 @@ def get_fruityvice_data(this_fruit_choice):
   return fruityvice_normalized
 
 #API response
-streamlit.header('Fruityvice Fruit Advice!')
+streamlit.header('View Our Fruit List - Add Your Favorites!')
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
   if not fruit_choice:
@@ -86,7 +86,7 @@ def insert_row_snowflake(new_fruit):
     return "Thanks for adding " + new_fruit
   
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-if streamlit.button('View Our Fruit List - Add Your Favorites!'):
+if streamlit.button('Add fruit'):
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   back_from_function = insert_row_snowflake(add_my_fruit)
   streamlit.text(back_from_function)
