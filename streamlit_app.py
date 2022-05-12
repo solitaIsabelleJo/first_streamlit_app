@@ -57,7 +57,7 @@ my_cur = my_cnx.cursor()
 #streamlit.text(my_data_row)
 
 #don't run anything past here while we troubleshoot
-streamlit.stop()
+#streamlit.stop()
 
 #Query data instead
 
